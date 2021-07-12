@@ -4,6 +4,7 @@ const db=require('./db')
 const app=express()
 const typeDefs = require('./schema/schema.js');
 const Query=require('./resolvers/Query')
+const Mutation=require('./resolvers/Mutation')
 const User=require('./resolvers/User')
 const Post=require('./resolvers/Post')
 
@@ -11,6 +12,7 @@ const server=new ApolloServer({
     typeDefs,
     resolvers:{
         Query,
+        Mutation,
         User,
         Post
     },
